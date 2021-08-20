@@ -17,3 +17,20 @@ const multiply = function (a: number, b: number): number {
 const logger = (msg: string): void => {
   console.log(msg);
 }
+
+const throwError = (message: string): never => {
+  throw new Error(message);
+}
+
+const throwError2 = (message: string): string => {
+  if (!message) {
+    throw new Error(message);
+  }
+  return message;
+}
+
+const throwError3 = (message: string): void => {
+  if (!message) {
+    throw new Error(message);
+  }
+}
