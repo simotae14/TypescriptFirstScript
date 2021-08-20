@@ -1,9 +1,9 @@
 let apples = 5;
-let speed = 'fast';
-let hasName = true;
+let speed: string = 'fast';
+let hasName: boolean = true;
 
-let nothingMuch = null;
-let nothing = undefined;
+let nothingMuch: null = null;
+let nothing: undefined = undefined;
 
 // built in Object
 let now: Date = new Date();
@@ -30,3 +30,9 @@ let point: { x: number, y: number } = {
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
+
+// When to use Explicit Annotations
+// 1) For functions that returns the 'any' Type
+const json = '{ "x": 10, "y": 20 }';
+const coordinates: { x: number; y: number} = JSON.parse(json);
+console.log(coordinates); // { x: 10, y: 20 }
