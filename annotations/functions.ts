@@ -34,3 +34,28 @@ const throwError3 = (message: string): void => {
     throw new Error(message);
   }
 }
+
+// DESTRUCTURING ANNOTATIONS
+const todaysWeather = {
+  date: new Date(),
+  weather: 'sunny'
+};
+
+const logsWeather = (forecast: {
+  date: Date,
+  weather: string
+}): void => {
+  console.log(forecast.date);
+  console.log(forecast.weather);
+};
+
+// ES 2015 Destructuring
+const logsWeatherES2015 = ({date, weather}: {
+  date: Date,
+  weather: string
+}): void => {
+  console.log(date);
+  console.log(weather);
+};
+
+logsWeatherES2015(todaysWeather);
