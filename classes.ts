@@ -1,5 +1,5 @@
 class Vehicle {
-  public honk(): void {
+  protected honk(): void {
     console.log('beep');
   }
 }
@@ -10,8 +10,12 @@ class Car extends Vehicle {
   }
   startDrivingProcess(): void {
     this.drive();
+    this.honk();
   }
 }
+
+const vehicle = new Vehicle();
+vehicle.honk(); // give error
 
 // create instance of car
 const car = new Car();
