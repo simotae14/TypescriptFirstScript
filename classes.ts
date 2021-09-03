@@ -7,7 +7,13 @@ class Vehicle {
   }
 }
 
-// create instance
-const vehicle = new Vehicle();
-vehicle.drive();
-vehicle.honk();
+class Car extends Vehicle {
+  drive(): void {
+    console.log('vroom');
+  }
+}
+
+// create instance of car
+const car = new Car();
+car.drive();
+car.honk();
